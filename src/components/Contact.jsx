@@ -39,7 +39,7 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
-    // Clear error for this field when user types
+
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -57,17 +57,13 @@ const Contact = () => {
       return;
     }
 
-    // TODO: Implement actual form submission
-    // Could send to an API endpoint
     setIsSubmitting(true);
 
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', message: '' });
 
-      // Reset success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000);
     }, 1500);
   };

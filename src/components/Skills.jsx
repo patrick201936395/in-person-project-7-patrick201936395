@@ -4,10 +4,8 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // TODO: Fetch skills from API (optional challenge)
-  // For now, using hardcoded data
   useEffect(() => {
-    // Simulate API call
+
     setTimeout(() => {
       setSkills([
         { id: 1, name: 'React', level: 90, category: 'Frontend' },
